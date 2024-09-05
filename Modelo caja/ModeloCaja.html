@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    .cajaInline { 
+        display: inline-block;
+        border: 1px solid blue;
+        padding: 10px;
+        margin: 10px;
+        width: 100px;
+        height: 50px;
+        background-color: lightblue;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .cajaBlock { 
+        display: block;
+        border: 5px solid red;
+        padding: 20px;
+        margin: 20px;
+        width: 300px;
+        height: 100px;
+        background-color: lightcoral;
+        text-align: center;
+        line-height: 100px;
+    }
+    .cajaFlex {
+        display: flex;
+        justify-content: space-between;
+        border: 3px dashed green;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .cajaItem {
+        flex: 1;
+        border: 2px solid purple;
+        margin: 5px;
+        padding: 10px;
+        background-color: lightyellow;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="cajaInline">Inline 1</div>
+    <div class="cajaBlock">Block 1</div>
+    <div class="cajaInline">Inline 2</div>
+    <div class="cajaInline">Inline 3</div>
+    <div class="cajaInline">Inline 4</div>
+    
+    <div class="cajaFlex">
+        <div class="cajaItem">Flex 1</div>
+        <div class="cajaItem">Flex 2</div>
+        <div class="cajaItem">Flex 3</div>
+    </div>
+</body>
+</html>
+
