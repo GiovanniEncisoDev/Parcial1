@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            background-color: aqua;
+            overflow: auto; /**/
+        }
+        .caja{
+            float: left; 
+            width:100px;
+            height: 100px;
+            background-color: blue;
+            border: 2px solid red;
+            color:yellow;
+            margin-right: 15px;
+        }
+        #caja4{
+            clear: left; /*agregar tipo enter*/
+        }
+        /*no todas las propiedades heredan 
+        position no conviene que se hereden, solo al padre
+        font family heredan todos los compatibles*/
+        body{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="caja" id="caja1">caja1</div>
+        
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, necessitatibus facere omnis nesciunt quaerat placeat, voluptatem enim corrupti magnam officiis id architecto sapiente inventore quam iste sunt perspiciatis amet corporis?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, adipisci. Nulla ullam totam ratione natus sunt inventore repellendus perspiciatis eligendi dolore similique, assumenda illo esse, maxime blanditiis neque ab est!
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, adipisci. Nulla ullam totam ratione natus sunt inventore repellendus perspiciatis eligendi dolore similique, assumenda illo esse, maxime blanditiis neque ab est!
+            <div class="caja" id="caja2">caja2</div>
+    <div class="caja" id="caja3">caja3</div>
+    <div class="caja" id="caja4">caja4</div>
+    <div class="caja" id="caja5">caja5</div>
+    </div>
+</body>
+</html>
