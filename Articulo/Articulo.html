@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bloatware</title>
     <style>
         body{
             background-color: aliceblue;
-        }
-        *{
+            font-family:Arial, Helvetica, sans-serif;
             box-sizing: border-box;
+            line-height: 1.7em;
+            text-align: justify;
             margin: 0;
             padding: 0;
         }
         #contenedor{
             width: 60%;
-            margin: 0 auto;
-            font-family:Arial, Helvetica, sans-serif;
-            line-height: 1.7em;
-            text-align: justify;
+            margin: 0 auto; 
+            padding: 20px;
+            background-color: white;  
+            box-shadow: 0 px 0px 0px 0px rgba(0,0,0,0.1);       
         }
         img{
             float: right;
@@ -27,16 +28,18 @@
             margin-left: 20px;
             margin-bottom: 20px;
         }
-        h1{
-            margin: 20px auto;
-            text-align: center;
-            font-size: 2em;
-            color: #333;
-        }
-        h2 {
-            margin: 40px 0 20px;
+        h1, h2{
             text-align: center;
             color: darkslategray;
+        }
+        h1{
+            margin-bottom: 2.5em;
+            font-size: 2em;
+            
+        }
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
             font-size: 1.8em;
             border-bottom: 2px solid black;
             padding-bottom: 10px;
@@ -57,6 +60,24 @@
             background-color: #f4f4f4;
             padding: 2px 5px;
             border-radius: 4px;
+        }
+        a{
+            color: darkblue;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        @media(max-width:768px){
+            #contenedor{
+                width: 90%;
+            } 
+            img{
+                width: 100%; 
+                height: auto; 
+                float: none; 
+                margin: 20px 0;
+            }
         }
     </style>
 </head>
