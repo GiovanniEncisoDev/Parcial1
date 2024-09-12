@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascada en CSS</title>
+    <style>
+        /* Regla inicial */
+        h1 {
+            color: orange;
+            font-size: 24px;
+        }
+        /* Otra regla con la misma especificidad, pero declarada después */
+        h1 {
+            color: teal;
+        }
+    </style>
+</head>
+<body>
+    <h1>El color final de este texto es teal debido a la cascada.</h1>
+</body>
+</html>
