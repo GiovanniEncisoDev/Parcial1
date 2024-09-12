@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad en CSS</title>
+    <style>
+        /* Estilo con un selector de tipo (baja especificidad) */
+        p {
+            color: green;
+        }
+        /* Estilo con una clase (mayor especificidad) */
+        .highlight {
+            color: red;
+        }
+        /* Estilo con un ID (aún mayor especificidad) */
+        #important {
+            color: blue;
+        }
+        /* Estilo en línea (máxima especificidad) */
+    </style>
+</head>
+<body>
+    <p>Este texto es verde debido a la regla del selector de tipo.</p>
+    <p class="highlight">Este texto es rojo porque la clase tiene mayor especificidad.</p>
+    <p id="important">Este texto es azul porque el ID tiene la mayor especificidad de todos.</p>
+    <p style="color: purple;">Este texto es púrpura porque los estilos en línea tienen la especificidad más alta.</p>
+</body>
+</html>
