@@ -1,6 +1,6 @@
 # Unidades de Medida en CSS
 
-En CSS, existen diferentes unidades de medida que se utilizan para definir el tamaño, espacio y posicionamiento de los elementos. Aquí te dejo una tabla con las más comunes:
+En CSS, existen diferentes unidades de medida que se utilizan para definir el tamaño, espacio y posicionamiento de los elementos. Aquí  una tabla con las más comunes:
 
 | Unidad | Descripción                               | Ejemplo |
 |--------|-------------------------------------------|---------|
