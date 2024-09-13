@@ -3,66 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grid Layout Example</title>
     <style>
-         .grid.container{
-        display: inline-grid;
-        grid-template-colums: 300px 300px 300px;
-        grid-template-rows: 300px 300px 300px;
-        row-gap: 10px;
-    }
-    .one{
-        grid-column: 1/3;
-        grid-row: 1/3;
-    }
-    .two{
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    .three{
-        grid-column: 2/3;
-        grid-row: 1/3;
-    }
-    .item1{grid-area: header;}
-    .item2{grid-area: menu;}
-    .item3{grid-area: main;}
-    .item4{grid-area: right;}
-    .item5{grid-area: footer;}
-
-    .grid{
-        display:grid;
-        grid-template-areas: 
-        'header header header header header header',
-        'menu main main right right right'
-        'menu footer footer footer footer footer';
+        .item-grid {
+            display: grid;
+            grid-template-areas:
+                'item1 item1 item2'
+                'item3 item4 item5'
+                'item6 item6 item6';
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto; 
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 20px; 
         }
 
-        .grid-container{
-            background-color: lightblue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
+        .item-grid > div {
+            background-color: lightcoral;
             border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
         }
+
+        .item1 {
+            grid-area: item1;
+        }
+
+        .item2 {
+            grid-area: item2;
+        }
+
+        .item3 {
+            grid-area: item3;
+        }
+
+        .item4 {
+            grid-area: item4;
+        }
+
+        .item5 {
+            grid-area: item5;
+        }
+
+        .item6 {
+            grid-area: item6;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header'
+                'menu main right'
+                'footer footer footer';
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container > div {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .menu {
+            grid-area: menu;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .right {
+            grid-area: right;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
     </style>
 </head>
 <body>
-   <div class="grid-container">
-    <div class="one">1</div>
-    <div class="two">1</div>
-    <div class="three">1</div>
-    <div class="for">1</div>
-    <div class="five">1</div>
-    <div class="six">1</div>
 
+   <div class="item-grid">
+      <div class="item1">Item 1</div>
+      <div class="item2">Item 2</div>
+      <div class="item3">Item 3</div>
+      <div class="item4">Item 4</div>
+      <div class="item5">Item 5</div>
+      <div class="item6">Item 6</div>
    </div>
-   <div class="grid">
-    <div class="item1">header</div>
-    <div class="item2">menu</div>
-    <div class="item3">main</div>
-    <div class="item4">right</div>
-    <div class="item5">footer</div>
+
+   <div class="grid-container">
+      <div class="header">Header</div>
+      <div class="menu">Menu</div>
+      <div class="main">Main</div>
+      <div class="right">Right Sidebar</div>
+      <div class="footer">Footer</div>
    </div>
+
 </body>
 </html>
