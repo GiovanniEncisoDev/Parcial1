@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Template Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .item-grid {
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            grid-template-areas:
+                'Encabezado Encabezado Encabezado'
+                'BarraLateral Contenido Contenido'
+                'PieDePagina PieDePagina PieDePagina';
+            grid-template-columns: 20% 80%;
+            grid-template-rows: 12% 70% 18%;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .item-grid > div {
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .item1 {
+            grid-area: Encabezado;
+            background-color: aqua;
+            font-size: 48px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .item2 {
+            grid-area: BarraLateral;
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .item2 h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .item2 ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .item2 ul li {
+            margin: 10px 0;
+        }
+
+        .item2 ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .item3 {
+            grid-area: Contenido;
+            background-color: blueviolet;
+            text-align: justify;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .item4 {
+            grid-area: PieDePagina;
+            background-color: slateblue;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .item4 h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-left: 0;
+            padding: 0; 
+        }
+
+        .item4 ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .item4 ul li {
+            margin: 5px 0;
+        }
+
+        .item4 ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="item-grid">
+      <div class="item1">Bloatware: ¿Qué es y por qué eliminarlo?</div>
+      
+      <div class="item2">
+        <h3>Artículos Relacionados</h3>
+        <ul>
+           <li><a href="#">Cómo optimizar tu sistema operativo</a></li>
+           <li><a href="#">Aplicaciones esenciales vs. innecesarias</a></li>
+           <li><a href="#">Mejoras de rendimiento en dispositivos móviles</a></li>
+        </ul>
+      </div>
+      
+      <div class="item3">
+          <p>
+              El término "bloatware" se refiere a las aplicaciones preinstaladas en un dispositivo, 
+              generalmente no deseadas, que ocupan espacio y consumen recursos del sistema. Estas 
+              aplicaciones suelen ser difíciles de eliminar y no aportan un valor significativo para 
+              el usuario. La eliminación de bloatware es importante para mejorar el rendimiento, 
+              liberar espacio de almacenamiento y optimizar la experiencia de uso del dispositivo.
+          </p>
+      </div>
+      
+      <div class="item4">
+        <h3>Referencias</h3>
+        <ul>
+           <li><a href="https://example.com">¿Qué es el Bloatware?</a> - Fuente 1</li>
+           <li><a href="https://example2.com">Cómo eliminar Bloatware en Android</a> - Fuente 2</li>
+           <li><a href="https://example3.com">Impacto del Bloatware en el rendimiento de PC</a> - Fuente 3</li>
+        </ul>
+     </div>
+   </div>
+</body>
+</html>
