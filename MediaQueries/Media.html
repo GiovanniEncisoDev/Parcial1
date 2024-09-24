@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de aplicacion mediaqueries</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .contenedor{
+            width: 100vw;
+            display: flex;
+        }
+        .Hijo{
+            border: 1px solid blue;
+            background-color: aqua;
+            flex-grow: 1;
+            text-align: center;
+        }
+        @media screen and (max-width: 500px){
+            .contenedor{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="Hijo">Hijo 1</div>
+        <div class="Hijo">Hijo 2</div>
+        <div class="Hijo">Hijo 3</div>
+        <div class="Hijo">Hijo 4</div>
+        <div class="Hijo">Hijo 5</div>
+        <div class="Hijo">Hijo 6</div>
+    </div>
+</body>
+</html>
