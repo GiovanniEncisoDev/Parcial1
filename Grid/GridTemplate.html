@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de Template Grid</title>
+    <title>Ejemplo de Template Grid Mejorado</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            overflow-y: auto;
+            min-height: 100vh;
         }
 
         .item-grid {
@@ -19,8 +24,8 @@
                 'Encabezado Encabezado Encabezado'
                 'BarraLateral Contenido Contenido'
                 'PieDePagina PieDePagina PieDePagina';
-            grid-template-columns: 20% 80%;
-            grid-template-rows: 12% 70% 18%;
+            grid-template-columns: calc(20% - 10px) calc(80% - 20px);
+            grid-template-rows: 12% auto auto; /* Cambiado para adaptar el pie de página */
             gap: 10px;
             padding: 10px;
         }
@@ -47,24 +52,36 @@
             justify-content: flex-start;
         }
 
-        .item2 h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-align: center;
+        .articulos-relacionados {
+            display: flex;
+            flex-direction: column;
         }
 
-        .item2 ul {
+        .articulos-titulo {
+            background-color: darkcyan;
+            font-size: 28px;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .articulos-contenido {
+            background-color: lightseagreen;
+            padding: 10px;
+        }
+
+        .articulos-contenido ul {
             list-style-type: none;
             padding: 0;
         }
 
-        .item2 ul li {
+        .articulos-contenido ul li {
             margin: 10px 0;
         }
 
-        .item2 ul li a {
+        .articulos-contenido ul li a {
             text-decoration: none;
-            color: black;
+            color: white;
         }
 
         .item3 {
@@ -75,35 +92,88 @@
             overflow-y: auto;
         }
 
+        .definicion {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .cuadros {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .cuadro {
+            border: 1px solid white;
+            background-color: indigo;
+            color: white;
+            padding: 15px;
+            width: calc(33.33% - 10px);
+        }
+
+        .cuadro h4 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .cuadro ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
         .item4 {
             grid-area: PieDePagina;
             background-color: slateblue;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Se alinea todo el contenido al principio */
             padding: 20px;
-            text-align: left;
+            height: auto; /* Se ajusta dinámicamente al contenido */
         }
 
-        .item4 h3 {
+        .referencias-titulo {
+            background-color: darkslateblue;
             font-size: 24px;
-            margin-bottom: 10px;
-            margin-left: 0;
-            padding: 0; 
+            padding: 10px;
+            margin-right: 10px;
+            flex-basis: 20%;
         }
 
-        .item4 ul {
+        .referencias-contenido {
+            background-color: rebeccapurple;
+            padding: 20px;
+            flex-basis: calc(60% - 10px);
+            height: auto; /* Se ajusta automáticamente */
+        }
+
+        .referencias-contenido ul {
             list-style-type: none;
             padding: 0;
-            text-align: center;
         }
 
-        .item4 ul li {
-            margin: 5px 0;
+        .referencias-contenido ul li {
+            margin: 10px 0;
         }
 
-        .item4 ul li a {
+        .referencias-contenido ul li a {
             text-decoration: none;
             color: white;
         }
 
+        .referencias-imagen {
+            background-color: darkmagenta;
+            padding: 10px;
+            flex-basis: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .referencias-imagen img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -111,31 +181,66 @@
       <div class="item1">Bloatware: ¿Qué es y por qué eliminarlo?</div>
       
       <div class="item2">
-        <h3>Artículos Relacionados</h3>
-        <ul>
-           <li><a href="#">Cómo optimizar tu sistema operativo</a></li>
-           <li><a href="#">Aplicaciones esenciales vs. innecesarias</a></li>
-           <li><a href="#">Mejoras de rendimiento en dispositivos móviles</a></li>
-        </ul>
+        <div class="articulos-relacionados">
+            <div class="articulos-titulo">Artículos Relacionados</div>
+            <div class="articulos-contenido">
+                <ul>
+                    <li><a href="#">Cómo optimizar tu sistema operativo</a></li>
+                    <li><a href="#">Aplicaciones esenciales vs. innecesarias</a></li>
+                    <li><a href="#">Mejoras de rendimiento en dispositivos móviles</a></li>
+                </ul>
+            </div>
+        </div>
       </div>
       
       <div class="item3">
-          <p>
-              El término "bloatware" se refiere a las aplicaciones preinstaladas en un dispositivo, 
-              generalmente no deseadas, que ocupan espacio y consumen recursos del sistema. Estas 
-              aplicaciones suelen ser difíciles de eliminar y no aportan un valor significativo para 
-              el usuario. La eliminación de bloatware es importante para mejorar el rendimiento, 
-              liberar espacio de almacenamiento y optimizar la experiencia de uso del dispositivo.
-          </p>
+          <div class="definicion">
+              <strong>Definición:</strong> El término "bloatware" se refiere a las aplicaciones preinstaladas en un dispositivo, 
+              generalmente no deseadas, que ocupan espacio y consumen recursos del sistema.
+          </div>
+
+          <div class="cuadros">
+              <div class="cuadro">
+                  <h4>Ventajas</h4>
+                  <ul>
+                      <li>Algunas aplicaciones preinstaladas son útiles.</li>
+                      <li>Pueden ofrecer integración con el ecosistema del fabricante.</li>
+                  </ul>
+              </div>
+
+              <div class="cuadro">
+                  <h4>Similitudes o Indiferencias</h4>
+                  <ul>
+                      <li>El bloatware es común en Android y Windows.</li>
+                      <li>A veces es difícil diferenciar apps útiles de innecesarias.</li>
+                  </ul>
+              </div>
+
+              <div class="cuadro">
+                  <h4>Desventajas</h4>
+                  <ul>
+                      <li>Ocupa espacio de almacenamiento.</li>
+                      <li>Puede ralentizar el rendimiento del dispositivo.</li>
+                      <li>Difícil de desinstalar en algunos casos.</li>
+                  </ul>
+              </div>
+          </div>
       </div>
       
       <div class="item4">
-        <h3>Referencias</h3>
-        <ul>
-           <li><a href="https://example.com">¿Qué es el Bloatware?</a> - Fuente 1</li>
-           <li><a href="https://example2.com">Cómo eliminar Bloatware en Android</a> - Fuente 2</li>
-           <li><a href="https://example3.com">Impacto del Bloatware en el rendimiento de PC</a> - Fuente 3</li>
-        </ul>
+        <div class="referencias-titulo">
+            <h3>Referencias</h3>
+        </div>
+        <div class="referencias-contenido">
+            <ul>
+                <li><a href="https://example.com">¿Qué es el Bloatware? - Fuente 1</a></li>
+                <li><a href="https://example2.com">Cómo eliminar Bloatware en Android - Fuente 2</a></li>
+                <li><a href="https://example3.com">Impacto del Bloatware en el rendimiento de PC - Fuente 3</a></li>
+            </ul>
+        </div>
+        <div class="referencias-imagen">
+            <img src="https://via.placeholder.com/100" alt="Imagen de referencia">
+        </div>
      </div>
    </div>
 </body>
