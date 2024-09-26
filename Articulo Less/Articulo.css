@@ -3,7 +3,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   line-height: 1.7em;
-  text-align: Justify;
+  text-align: justify;
   margin: 0;
   padding: 0;
 }
@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   background-color: white;
-  box-shadow: 0 px 0px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 #contenedor h1,
 #contenedor h2 {
