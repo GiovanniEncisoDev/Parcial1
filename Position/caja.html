@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    .Contenedor{
+      background-color: bisque;
+      overflow: auto;
+    }
     .caja{
       background-color: blue;
       width: 100px;
@@ -12,6 +16,7 @@
       border: solid greenyellow 3px;
       color: aquamarine;
       text-align: center;
+      float: left;
     }
     #caja3 {
       position: static;
@@ -22,6 +27,10 @@
       position: absolute;
       top:50px;
       left: 50px;
+      clear:left;
+    }
+    #caja5{
+      clear:left;
     }
     #caja6 {
       position: relative;
@@ -32,6 +41,7 @@
       position: fixed;
       top:50px;
       left: 50px;
+      clear:left;
     }
     #caja10 {
       position: sticky;
@@ -41,6 +51,7 @@
   </style>
 </head>
 <body>
+  <div class="Contenedor">
   <div class="caja" id="caja1">Contenido 1</div>
   <div class="caja" id="caja2">Contenido 2</div>
   <div class="caja" id="caja3">Contenido 3</div>
@@ -51,5 +62,7 @@
   <div class="caja" id="caja8">Contenido 8</div>
   <div class="caja" id="caja9">Contenido 9</div>
   <div class="caja" id="caja10">Contenido 10</div>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci perferendis voluptate aspernatur illo nisi fuga, minima est sapiente odio, vitae reiciendis ad, mollitia tempore porro voluptates tempora! Illum, necessitatibus accusamus.</p>
+</div>
 </body>
 </html>
