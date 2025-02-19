@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .contenedor{
+      background-color: bisque;
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: 30% 70%; /*especificar cada una*/
+      grid-template-rows: 20% 80%;
+      grid-template-areas: "barrasup barrasup"
+                          "barralat contenido";
+    }
+    .caja{
+      background-color: aquamarine;
+      border: 2px solid red;
+    }
+    #caja1 { grid-area: barrasup;}
+    #caja2 { grid-area: barralat;}
+    #caja3 { grid-area: contenido;}
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div id="caja1" class="caja">Caja 1</div>
+    <div id="caja2" class="caja">Caja 2</div>
+    <div id="caja3" class="caja">Caja 3</div>
+    </div>
+</body>
+</html>
