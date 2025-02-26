@@ -38,8 +38,9 @@ body {
 
 /* MEDIA QUERIES */
 
-/* 📱 0 - 480px (Teléfonos pequeños) */
-@media screen and (max-width: 480px) {
+/* 0 - 480px (Teléfonos pequeños) */
+/* prueba con 100*/
+@media screen and (min-width: 100px) and (max-width: 480px) {
   .contenedor {
     flex-direction: column;
     align-items: center;
@@ -55,7 +56,7 @@ body {
   }
 }
 
-/* 📱 481 - 768px (Teléfonos grandes y tablets) */
+/* 481 - 768px (Teléfonos grandes y tablets) */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .contenedor {
     justify-content: space-around;
@@ -70,7 +71,7 @@ body {
   }
 }
 
-/* 💻 769 - 1279px (Laptops y pantallas medianas) */
+/* 769 - 1279px (Laptops y pantallas medianas) */
 @media screen and (min-width: 769px) and (max-width: 1279px) {
   .contenedor {
     justify-content: space-between;
@@ -85,7 +86,7 @@ body {
   }
 }
 
-/* 🖥️ 1280px+ (Pantallas grandes) */
+/* 1280px+ (Pantallas grandes) */
 @media screen and (min-width: 1280px) {
   .contenedor {
     justify-content: center;
